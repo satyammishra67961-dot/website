@@ -31,8 +31,9 @@ npm run preview    # preview the production build
 
 ## 🌐 Deploy to GitHub Pages
 
-The Vite `base` path is set to **`/webb-makerr/`** in `vite.config.js` (matches the
-repository name). If you rename the repo, update `BASE_PATH` there.
+The Vite `base` is set to **`./`** (relative) in `vite.config.js`, so all asset
+paths resolve correctly for any repository name — e.g.
+`https://<username>.github.io/website/`.
 
 ### 1. Push the project
 
@@ -57,8 +58,13 @@ site automatically on every push to `main`.
 ### 3. Your site will be live at
 
 ```
-https://<your-username>.github.io/webb-makerr/
+https://<your-username>.github.io/website/
 ```
+
+> **White / blank page?** It means the browser can't find the built files. Make
+> sure the Pages **Source is set to "GitHub Actions"** (not "Deploy from a
+> branch"), and that the workflow finished with a green check under the
+> **Actions** tab. Never serve the raw source — the site must be built first.
 
 ## 🎬 Adding the hero video
 
