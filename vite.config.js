@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react'
 //   https://<username>.github.io/website/
 // and would keep working even if the repo were renamed later.
 export default defineConfig({
-  base: './',
+  base: './website/',
   plugins: [react()],
   build: {
     outDir: 'dist',
